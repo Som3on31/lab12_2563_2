@@ -23,10 +23,14 @@ int main()
 }
 
 void updateImage(bool canvas[][M],int size,int x,int y){
-    if (size>=pow(pow(x,2)+pow(y,2),0.5)+1) canvas[x][y]==1;
+    for (int j=0;j<N;j++){
+        for (int i=0;i<M;i++){
+            if (pow(pow(x-j,2)+pow(y-i,2),0.5)+1<=size) canvas[j][i]=1;
+        }
+    }
 }
 
-void showImage(const bool yesNo[N][M]){
+void showImage(const bool canvas[N][M]){
     
     cout << "------------------------------------------------------------------------\n";
 
@@ -34,7 +38,7 @@ void showImage(const bool yesNo[N][M]){
         cout << "|";
 
         for (int i=0;i<M;i++){
-            if (yesNo[j][i]) cout << "*";
+            if (canvas[j][i]) cout << "*";
             else cout << " ";
             
         }
