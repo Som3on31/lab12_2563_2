@@ -21,3 +21,21 @@ int main()
     }while(s != 0 || x != 0 || y != 0);
     return 0;
 }
+
+void updateImage(bool canvas[][M],int size,int x,int y){
+    for (;;){
+        for(;;){
+
+            
+        }
+
+    }    
+
+}
+
+void showImage(const bool yes[][M]){
+    cout << "----------------------------------------------------------------------";
+
+    cout << "----------------------------------------------------------------------";
+
+}
